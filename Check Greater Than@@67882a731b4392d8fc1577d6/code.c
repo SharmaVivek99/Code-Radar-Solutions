@@ -1,0 +1,11 @@
+#include <stdio.h>
+int main(){
+    int n;
+    int no;
+    scanf("%d%d",&n,&no);
+    if(n>no){
+  d      printf("True")
+    }else{
+        printf("False")
+    }
+}
