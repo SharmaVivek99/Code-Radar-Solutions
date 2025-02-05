@@ -5,7 +5,7 @@ int main{
     if(i<j){
         printf("%d",j);
     }else{
-        printf("%d",i)
+        printf("%d",i);
     }
     return 0;
 }
