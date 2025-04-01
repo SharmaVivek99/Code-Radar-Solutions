@@ -2,7 +2,7 @@
 int main(){
     int even=0;
     int odd=0;
-    int arr[5];
+    int arr[];
     for(int i=0;i<5;i++){
         scanf("%d",&arr[i]);
     }
