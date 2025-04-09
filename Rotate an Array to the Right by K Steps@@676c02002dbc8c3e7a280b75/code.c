@@ -30,5 +30,5 @@ int main() {
 
     // No majority element found
     printf("-1\n");
-    return 0;
+   return 0;
 }
