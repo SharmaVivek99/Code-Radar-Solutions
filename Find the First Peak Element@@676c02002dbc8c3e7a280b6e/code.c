@@ -27,5 +27,5 @@ int main() {
     // If no peak element is found
     printf("-1");
     
-    return 0;
+    return 0;
 }
