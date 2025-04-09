@@ -1,24 +1,31 @@
-// Your code here...
-#include <stdio.h>
+ #include <stdio.h>
 
 int main() {
     int n;
+
+    // Taking the number of elements
+   
     scanf("%d", &n);
+
     int arr[n];
 
-    // Read array elements
+    // Taking input for the array
+   
     for (int i = 0; i < n; i++) {
         scanf("%d", &arr[i]);
     }
 
-    // Check if the array is sorted
-    for (int i = 0; i < n - 1; i++) {  
-        if (arr[i] > arr[i + 1]) {  // Only check if it decreases
-            printf("Not Sorted\n");
-            return 0;  
+    // Finding the first peak element
+    for (int i = 0; i < n; i++) {
+        // Checking if the current element is a peak
+        if ((i == 0 || arr[i] > arr[i - 1]) && (i == n - 1 || arr[i] > arr[i + 1])) {
+            printf("%d\n", arr[i]);
+            return 0; // Stop after finding the first peak
         }
     }
 
-    printf("Sorted\n");  // If loop completes, it's sorted
-    return 0;
+    // If no peak element is found
+    printf("-1");
+    
+    return 0;
 }
