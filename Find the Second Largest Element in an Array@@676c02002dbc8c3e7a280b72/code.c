@@ -32,3 +32,10 @@ int main() {
 
     // If second largest is still -1, it means all elements were the same
     if (sec == -1000000) {
+        printf("-1");
+    } else {
+        printf("%d\n", sec);
+    }
+
+    return 0;
+}
