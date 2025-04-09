@@ -1,31 +1,34 @@
- // Your code here...
 #include <stdio.h>
 
 int main() {
     int n;
     scanf("%d", &n);
-
     int arr[n];
 
-    // Input the array elements
+    // Read array elements
     for (int i = 0; i < n; i++) {
         scanf("%d", &arr[i]);
     }
 
-   int target;
-   int found=0;
-   scanf("%d",&target);
-   for(int i=0;i<n;i++)
-   {
-    if(arr[i]==target)
-    {
-        printf("%d",i);
-        found=1;
-        break;
-        
+    // Check for majority element
+    for (int i = 0; i < n; i++) {
+        int count = 0;
+
+        // Count occurrences of arr[i]
+        for (int j = 0; j < n; j++) {
+            if (arr[j] == arr[i]) {
+                count++;
+            }
+        }
+
+        // If count is greater than n/2, print the element and exit
+        if (count > n / 2) {
+            printf("%d\n", arr[i]);
+            return 0;
+        }
     }
-   }
-   if(!found){
-    printf("-1");
-    }
+
+    // No majority element found
+    printf("-1\n");
+    return 0;
 }
